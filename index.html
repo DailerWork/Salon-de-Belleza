@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleza Élite | Salón de Belleza Premium | Cortes, Coloración, Tratamientos</title>
+    <meta name="description" content="Salón de belleza premium con los mejores estilistas. Cortes de pelo, coloración, tratamientos faciales, manicura, pedicura y más. Agenda tu cita hoy.">
+    
+    <!-- Preconexión para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Variables CSS - Design System */
+        :root {
+            /* Colores - Paleta elegante y sofisticada para salón de belleza */
+            --primary-1: #9C6B7D; /* Rosa pálido elegante */
+            --primary-2: #B58E9D; /* Rosa medio suave */
+            --primary-3: #7A5260; /* Rosa oscuro elegante */
+            --secondary-1: #A68F6F; /* Dorado suave */
+            --secondary-2: #C2AE91; /* Dorado claro */
+            --neutral-100: #FFFFFF; /* Blanco puro */
+            --neutral-200: #FAF7F5; /* Blanco cálido */
+            --neutral-300: #F0EBE6; /* Beige muy claro */
+            --neutral-400: #E0D8D1; /* Beige claro */
+            --neutral-500: #A89F97; /* Beige medio */
+            --neutral-600: #6B6259; /* Marrón claro */
+            --neutral-700: #4A423B; /* Marrón medio */
+            --neutral-800: #2A2520; /* Marrón oscuro */
+            
+            /* Tipografía */
+            --font-primary: 'Inter', sans-serif;
+            --font-secondary: 'Playfair Display', serif;
+            
+            /* Escala tipográfica */
+            --text-xs: 0.75rem;   /* 12px */
+            --text-sm: 0.875rem;  /* 14px */
+            --text-base: 1rem;    /* 16px */
+            --text-lg: 1.125rem;  /* 18px */
+            --text-xl: 1.25rem;   /* 20px */
+            --text-2xl: 1.5rem;   /* 24px */
+            --text-3xl: 1.875rem; /* 30px */
+            --text-4xl: 2.25rem;  /* 36px */
+            --text-5xl: 3rem;     /* 48px */
+            --text-6xl: 3.75rem;  /* 60px */
+            
+            /* Espaciado */
+            --space-xs: 0.25rem;  /* 4px */
+            --space-sm: 0.5rem;   /* 8px */
+            --space-md: 1rem;     /* 16px */
+            --space-lg: 1.5rem;   /* 24px */
+            --space-xl: 2rem;     /* 32px */
+            --space-2xl: 3rem;    /* 48px */
+            --space-3xl: 4rem;    /* 64px */
+            
+            /* Sombras */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            
+            /* Bordes */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            
+            /* Transiciones */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+        
+        /* Reset y estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            font-size: var(--text-base);
+            line-height: 1.6;
+            color: var(--neutral-700);
+            background-color: var(--neutral-100);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--neutral-800);
+        }
+        
+        h1 {
+            font-size: var(--text-5xl);
+        }
+        
+        h2 {
+            font-size: var(--text-4xl);
+        }
+        
+        h3 {
+            font-size: var(--text-3xl);
+        }
+        
+        h4 {
+            font-size: var(--text-2xl);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        a:hover {
+            color: var(--primary-1);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .section {
+            padding: var(--space-3xl) 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-1);
+            margin: var(--space-md) auto 0;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-sm) var(--space-xl);
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            font-size: var(--text-base);
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-1);
+            color: var(--neutral-100);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-3);
+            color: var(--neutral-100);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-1);
+            border: 1px solid var(--primary-1);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-1);
+            color: var(--neutral-100);
+            transform: translateY(-2px);
+        }
+        
+        .btn-large {
+            padding: var(--space-md) var(--space-2xl);
+            font-size: var(--text-lg);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            margin-top: var(--space-sm);
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+        
+        header.scrolled {
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-md) 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-secondary);
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--primary-1);
+            padding-left: var(--space-sm);
+        }
+        
+        .logo span {
+            color: var(--secondary-1);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--space-xl);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-1);
+            transition: width var(--transition-normal);
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: var(--text-2xl);
+            color: var(--neutral-700);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--neutral-100);
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity var(--transition-slow);
+            object-fit: cover;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 var(--space-md);
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: var(--text-6xl);
+            margin-bottom: var(--space-lg);
+            color: var(--neutral-100);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: var(--text-xl);
+            margin-bottom: var(--space-2xl);
+            color: var(--neutral-200);
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-indicators {
+            position: absolute;
+            bottom: var(--space-2xl);
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            z-index: 3;
+        }
+        
+        .hero-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color var(--transition-normal);
+        }
+        
+        .hero-indicator.active {
+            background-color: var(--neutral-100);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--neutral-200);
+        }
+        
+        .services-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-2xl);
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        
+        .services-actions {
+            display: flex;
+            gap: var(--space-md);
+        }
+        
+        .services-filters {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-2xl);
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: none;
+            border: none;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            color: var(--neutral-600);
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--primary-1);
+            color: var(--neutral-100);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .service-item {
+            background-color: var(--neutral-100);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-item-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .service-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .service-item:hover .service-item-image img {
+            transform: scale(1.05);
+        }
+        
+        .service-item-content {
+            padding: var(--space-lg);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-item-title {
+            font-size: var(--text-xl);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .service-item-price {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--primary-1);
+            white-space: nowrap;
+            margin-left: var(--space-sm);
+        }
+        
+        .service-item-description {
+            color: var(--neutral-600);
+            margin-bottom: var(--space-md);
+            flex: 1;
+        }
+        
+        .service-item-badges {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+            margin-bottom: var(--space-md);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-xs);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+        .badge-new {
+            background-color: var(--secondary-2);
+            color: var(--neutral-800);
+        }
+        
+        .badge-popular {
+            background-color: var(--primary-2);
+            color: white;
+        }
+        
+        .badge-limited {
+            background-color: var(--secondary-1);
+            color: white;
+        }
+        
+        .badge-bestseller {
+            background-color: var(--primary-1);
+            color: white;
+        }
+        
+        /* Modal de Servicios Completo */
+        .services-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+        }
+        
+        .services-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .services-modal-content {
+            background-color: var(--neutral-100);
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .services-modal.active .services-modal-content {
+            transform: scale(1);
+        }
+        
+        .services-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-xl);
+            border-bottom: 1px solid var(--neutral-300);
+            background-color: var(--primary-1);
+            color: var(--neutral-100);
+        }
+        
+        .services-modal-title {
+            font-size: var(--text-3xl);
+            margin: 0;
+            color: var(--neutral-100);
+        }
+        
+        .services-modal-close {
+            background: none;
+            border: none;
+            font-size: var(--text-2xl);
+            color: var(--neutral-100);
+            cursor: pointer;
+            transition: color var(--transition-fast);
+        }
+        
+        .services-modal-close:hover {
+            color: var(--neutral-300);
+        }
+        
+        .services-modal-body {
+            padding: var(--space-xl);
+            overflow-y: auto;
+            flex: 1;
+        }
+        
+        .services-category {
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .services-category:last-child {
+            margin-bottom: 0;
+        }
+        
+        .services-category-title {
+            font-size: var(--text-2xl);
+            color: var(--primary-1);
+            border-bottom: 2px solid var(--primary-1);
+            padding-bottom: var(--space-sm);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .services-category-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .service-full-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px dashed var(--neutral-400);
+        }
+        
+        .service-full-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .service-full-item-content {
+            flex: 1;
+            padding-right: var(--space-lg);
+        }
+        
+        .service-full-item-title {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .service-full-item-description {
+            color: var(--neutral-600);
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-full-item-price {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--primary-1);
+            white-space: nowrap;
+        }
+        
+        /* Reviews Section */
+        .reviews-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .reviews-carousel {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            gap: var(--space-xl);
+            padding: var(--space-md) 0;
+        }
+        
+        .review-card {
+            flex: 0 0 calc(33.333% - var(--space-xl));
+            background-color: var(--neutral-100);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: var(--space-md);
+            background-color: var(--neutral-300);
+        }
+        
+        .review-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .review-info {
+            flex: 1;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .reviewer-location {
+            font-size: var(--text-sm);
+            color: var(--neutral-500);
+        }
+        
+        .review-rating {
+            color: var(--primary-1);
+            margin-bottom: var(--space-md);
+        }
+        
+        .review-text {
+            flex: 1;
+            font-style: italic;
+            color: var(--neutral-600);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .review-date {
+            font-size: var(--text-sm);
+            color: var(--neutral-500);
+            text-align: right;
+        }
+        
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-top: var(--space-xl);
+        }
+        
+        .carousel-btn {
+            background-color: var(--neutral-100);
+            border: 1px solid var(--neutral-400);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+        
+        .carousel-btn:hover {
+            background-color: var(--primary-1);
+            color: var(--neutral-100);
+            border-color: var(--primary-1);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: start;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--neutral-200);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-1);
+            font-size: var(--text-xl);
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .contact-form {
+            background-color: var(--neutral-100);
+            padding: var(--space-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-sm);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid var(--neutral-400);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: var(--text-base);
+            transition: border-color var(--transition-fast);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-1);
+        }
+        
+        /* Google Calendar Section */
+        .calendar-section {
+            background-color: var(--neutral-200);
+            padding: var(--space-3xl) 0;
+        }
+        
+        .calendar-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--neutral-100);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .calendar-header {
+            background-color: var(--primary-1);
+            color: var(--neutral-100);
+            padding: var(--space-xl);
+            text-align: center;
+        }
+        
+        .calendar-header h3 {
+            margin: 0;
+            color: var(--neutral-100);
+        }
+        
+        /* Map Section */
+        .map-section {
+            padding: var(--space-3xl) 0;
+            background-color: var(--neutral-200);
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--neutral-800);
+            color: var(--neutral-300);
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-2xl);
+        }
+        
+        .footer-col h4 {
+            color: var(--neutral-100);
+            margin-bottom: var(--space-lg);
+            font-size: var(--text-lg);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-2);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--neutral-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition-normal);
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-1);
+            color: var(--neutral-100);
+        }
+        
+        .footer-bottom {
+            margin-top: var(--space-3xl);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--neutral-700);
+            text-align: center;
+            color: var(--neutral-500);
+            font-size: var(--text-sm);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: var(--space-xl);
+            right: var(--space-xl);
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            transition: transform var(--transition-normal);
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .review-card {
+                flex: 0 0 calc(50% - var(--space-xl));
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: var(--text-5xl);
+            }
+            
+            .hero-subtitle {
+                font-size: var(--text-lg);
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .review-card {
+                flex: 0 0 100%;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--neutral-100);
+                flex-direction: column;
+                padding: var(--space-xl);
+                box-shadow: var(--shadow-lg);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all var(--transition-normal);
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-actions {
+                display: none;
+            }
+            
+            .services-modal-content {
+                width: 95%;
+            }
+            
+            .service-full-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .service-full-item-price {
+                margin-top: var(--space-sm);
+            }
+            
+            .services-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: var(--text-4xl);
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-actions .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .services-filters {
+                gap: var(--space-sm);
+            }
+            
+            .filter-btn {
+                padding: var(--space-sm) var(--space-md);
+                font-size: var(--text-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Belleza<span>Élite</span></a>
+            
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Inicio</a></li>
+                    <li><a href="#services" class="nav-link">Servicios</a></li>
+                    <li><a href="#reviews" class="nav-link">Reseñas</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#calendar" class="btn btn-primary">Agendar Cita</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80" alt="Salón de belleza elegante" class="hero-slide active">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80" alt="Estilista trabajando en cabello" class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Manicura profesional" class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Tratamiento facial de lujo" class="hero-slide">
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Tu Belleza, Nuestra Pasión</h1>
+            <p class="hero-subtitle">Descubre la experiencia premium en nuestro salón de belleza. Donde cada cliente recibe atención personalizada y resultados excepcionales.</p>
+            <div class="hero-actions">
+                <a href="#services" class="btn btn-primary btn-large">Ver Servicios</a>
+                <a href="#calendar" class="btn btn-secondary btn-large">Agendar Cita</a>
+            </div>
+        </div>
+        
+        <div class="hero-indicators">
+            <span class="hero-indicator active" data-slide="0"></span>
+            <span class="hero-indicator" data-slide="1"></span>
+            <span class="hero-indicator" data-slide="2"></span>
+            <span class="hero-indicator" data-slide="3"></span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <h2 class="section-title" style="margin-bottom: 0;">Nuestros Servicios</h2>
+                <div class="services-actions">
+                    <button class="btn btn-secondary" id="viewFullServicesBtn">Ver Todos los Servicios</button>
+                </div>
+            </div>
+            
+            <div class="services-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="cabello">Cabello</button>
+                <button class="filter-btn" data-filter="unas">Uñas</button>
+                <button class="filter-btn" data-filter="facial">Facial</button>
+                <button class="filter-btn" data-filter="spa">Spa</button>
+            </div>
+            
+            <div class="services-grid" id="servicesGrid">
+                <!-- Los elementos de servicios se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Servicios Completo -->
+    <div class="services-modal" id="servicesModal">
+        <div class="services-modal-content">
+            <div class="services-modal-header">
+                <h3 class="services-modal-title">Todos Nuestros Servicios</h3>
+                <button class="services-modal-close" id="servicesModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="services-modal-body" id="servicesModalBody">
+                <!-- El contenido de servicios completos se cargará dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <section class="section" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestras Clientes</h2>
+            
+            <div class="reviews-container">
+                <div class="reviews-carousel" id="reviewsCarousel">
+                    <!-- Las reseñas se cargarán dinámicamente con JavaScript -->
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevReview">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn" id="nextReview">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Calendar Section -->
+    <section class="calendar-section" id="calendar">
+        <div class="container">
+            <h2 class="section-title">Agenda tu Cita</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h3>Selecciona la fecha y hora que mejor te convenga</h3>
+                </div>
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0spkvGm4EBGs7uvtaPibSicLW8mBm_Kv7p6hLAzo02aEJoXmCFoDRhUiczB-ry9hCm4Fio0aMQ?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+                <!-- end Google Calendar Appointment Scheduling -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.99879968459418!3d40.74005897932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3b30d0607%3A0x2d2d2f2e2d2d2d2d!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2ses!4v1620000000000!5m2!1sen!2ses" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Dirección</h4>
+                            <p>Av. Belleza 123, Distrito Elegante<br>Ciudad Capital</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horarios</h4>
+                            <p>Lunes a Sábado: 9:00 - 20:00<br>Domingos: 10:00 - 16:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Teléfono</h4>
+                            <p>099 105 3085</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>hola@bellezaelite.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label">Servicio de Interés</label>
+                            <select id="service" class="form-control" required>
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option value="corte">Corte de Pelo</option>
+                                <option value="color">Coloración</option>
+                                <option value="tratamiento">Tratamientos Capilares</option>
+                                <option value="manicura">Manicura</option>
+                                <option value="pedicura">Pedicura</option>
+                                <option value="facial">Tratamientos Faciales</option>
+                                <option value="spa">Spa</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Enviar a WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Belleza Élite</h4>
+                    <p>Tu salón de belleza premium donde la elegancia y el cuidado personal se encuentran para realzar tu belleza natural.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#reviews">Reseñas</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Horarios</h4>
+                    <ul class="footer-links">
+                        <li>Lunes - Viernes: 9:00 - 20:00</li>
+                        <li>Sábado: 9:00 - 18:00</li>
+                        <li>Domingo: 10:00 - 16:00</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Belleza 123, Ciudad Capital</li>
+                        <li><i class="fas fa-phone"></i> 099 105 3085</li>
+                        <li><i class="fas fa-envelope"></i> hola@bellezaelite.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Belleza Élite. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/593991053085?text=Hola,%20me%20interesan%20los%20servicios%20de%20Belleza%20Élite" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Datos de servicios para salón de belleza
+        const serviceItems = [
+            {
+                id: 1,
+                name: "Corte y Estilizado Premium",
+                category: "cabello",
+                price: 45.00,
+                description: "Corte personalizado según tu tipo de rostro y estilo, incluye lavado, acondicionamiento y estilizado profesional.",
+                image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80",
+                badges: ["bestseller"],
+                whatsappMessage: "Hola, me interesa el servicio de Corte y Estilizado Premium. ¿Podrían darme más información?"
+            },
+            {
+                id: 2,
+                name: "Coloración Completa",
+                category: "cabello",
+                price: 85.00,
+                description: "Coloración completa con productos de alta calidad, incluye consulta de color personalizada y tratamientos post-color.",
+                image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80",
+                badges: ["popular"],
+                whatsappMessage: "Hola, estoy interesada en la Coloración Completa. ¿Podrían explicarme las opciones disponibles?"
+            },
+            {
+                id: 3,
+                name: "Manicura Spa con Gel",
+                category: "unas",
+                price: 35.00,
+                description: "Manicura de lujo que incluye exfoliación, hidratación profunda y esmalte en gel de larga duración.",
+                image: "https://images.unsplash.com/photo-1604658243847-17375af581fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80",
+                badges: ["bestseller"],
+                whatsappMessage: "Hola, me interesa la Manicura Spa con Gel. ¿Podrían contarme más sobre el proceso?"
+            },
+            {
+                id: 4,
+                name: "Pedicura de Lujo",
+                category: "unas",
+                price: 45.00,
+                description: "Pedicura completa con exfoliación, mascarilla hidratante, masaje relajante y esmalte a elección.",
+                image: "https://images.unsplash.com/photo-1607778833979-4a89c0be5e16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+                badges: ["popular"],
+                whatsappMessage: "Hola, estoy interesada en la Pedicura de Lujo. ¿Qué incluye exactamente?"
+            },
+            {
+                id: 5,
+                name: "Limpieza Facial Profunda",
+                category: "facial",
+                price: 65.00,
+                description: "Limpieza facial profunda que elimina impurezas, incluye exfoliación, extracción y mascarilla hidratante.",
+                image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+                badges: ["nuevo"],
+                whatsappMessage: "Hola, me interesa la Limpieza Facial Profunda. ¿Es adecuada para piel sensible?"
+            },
+            {
+                id: 6,
+                name: "Tratamiento Capilar Reconstrucción",
+                category: "cabello",
+                price: 55.00,
+                description: "Tratamiento intensivo para cabello dañado que repara las fibras capilares y devuelve la vitalidad.",
+                image: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+                badges: [],
+                whatsappMessage: "Hola, estoy interesada en el Tratamiento Capilar de Reconstrucción. ¿Cuánto tiempo dura el efecto?"
+            },
+            {
+                id: 7,
+                name: "Masaje Relajante Corporal",
+                category: "spa",
+                price: 75.00,
+                description: "Masaje de 60 minutos que alivia tensiones musculares y promueve la relajación profunda.",
+                image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+                badges: ["limited"],
+                whatsappMessage: "Hola, me interesa el Masaje Relajante Corporal. ¿Qué técnicas utilizan?"
+            },
+            {
+                id: 8,
+                name: "Maquillaje Profesional",
+                category: "facial",
+                price: 50.00,
+                description: "Maquillaje profesional para eventos especiales, incluye consulta de estilo y productos de alta calidad.",
+                image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80",
+                badges: ["popular"],
+                whatsappMessage: "Hola, estoy interesada en el servicio de Maquillaje Profesional. ¿Pueden adaptarse a mi estilo personal?"
+            }
+        ];
+
+        // Datos de reseñas
+        const reviews = [
+            {
+                id: 1,
+                name: "María González",
+                location: "Barcelona, España",
+                rating: 5,
+                text: "Increíble experiencia en Belleza Élite. Mi coloración quedó perfecta y el trato fue excepcional. Definitivamente mi salón de confianza.",
+                date: "15 Oct, 2023",
+                avatar: "https://randomuser.me/api/portraits/women/32.jpg"
+            },
+            {
+                id: 2,
+                name: "Ana Martínez",
+                location: "Madrid, España",
+                rating: 5,
+                text: "La manicura con gel me duró tres semanas perfecta. Las estilistas son muy profesionales y el ambiente es relajante. Volveré pronto.",
+                date: "12 Oct, 2023",
+                avatar: "https://randomuser.me/api/portraits/women/68.jpg"
+            },
+            {
+                id: 3,
+                name: "Laura Rodríguez",
+                location: "Valencia, España",
+                rating: 4,
+                text: "Excelente corte de pelo, por fin encontré a alguien que entiende mi tipo de cabello. Muy contenta con el resultado.",
+                date: "8 Oct, 2023",
+                avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+            },
+            {
+                id: 4,
+                name: "Sofía López",
+                location: "Sevilla, España",
+                rating: 5,
+                text: "El tratamiento facial fue revitalizante. Mi piel luce radiante. El personal es muy amable y el lugar impecable.",
+                date: "5 Oct, 2023",
+                avatar: "https://randomuser.me/api/portraits/women/76.jpg"
+            }
+        ];
+
+        // Categorías de servicios para el modal
+        const serviceCategories = [
+            {
+                id: "cabello",
+                name: "Cabello"
+            },
+            {
+                id: "unas",
+                name: "Uñas"
+            },
+            {
+                id: "facial",
+                name: "Facial"
+            },
+            {
+                id: "spa",
+                name: "Spa"
+            }
+        ];
+
+        // Variables para el carrusel del hero
+        let currentSlide = 0;
+        const slideInterval = 5000; // 5 segundos
+
+        // Inicialización cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar elementos de servicios
+            renderServiceItems('all');
+            
+            // Cargar reseñas
+            renderReviews();
+            
+            // Configurar filtros de servicios
+            setupServiceFilters();
+            
+            // Configurar navegación del carrusel de reseñas
+            setupReviewsCarousel();
+            
+            // Configurar navegación suave
+            setupSmoothScrolling();
+            
+            // Configurar menú móvil
+            setupMobileMenu();
+            
+            // Configurar formulario de contacto
+            setupContactForm();
+            
+            // Configurar efecto de header al hacer scroll
+            setupHeaderScroll();
+            
+            // Configurar modal de servicios completo
+            setupServicesModal();
+            
+            // Configurar carrusel del hero
+            setupHeroCarousel();
+        });
+
+        // Función para configurar el carrusel del hero
+        function setupHeroCarousel() {
+            const slides = document.querySelectorAll('.hero-slide');
+            const indicators = document.querySelectorAll('.hero-indicator');
+            
+            function showSlide(index) {
+                // Ocultar todas las slides
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                // Mostrar slide actual
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                
+                currentSlide = index;
+            }
+            
+            // Configurar eventos de los indicadores
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    showSlide(index);
+                    resetInterval();
+                });
+            });
+            
+            // Función para siguiente slide
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+            
+            // Configurar intervalo automático
+            let slideTimer = setInterval(nextSlide, slideInterval);
+            
+            // Función para reiniciar intervalo
+            function resetInterval() {
+                clearInterval(slideTimer);
+                slideTimer = setInterval(nextSlide, slideInterval);
+            }
+        }
+
+        // Función para renderizar elementos de servicios
+        function renderServiceItems(category) {
+            const servicesGrid = document.getElementById('servicesGrid');
+            servicesGrid.innerHTML = '';
+            
+            const filteredItems = category === 'all' 
+                ? serviceItems 
+                : serviceItems.filter(item => item.category === category);
+            
+            // Mostrar solo 8 elementos como previsualización
+            const itemsToShow = filteredItems.slice(0, 8);
+            
+            itemsToShow.forEach(item => {
+                const serviceItemElement = document.createElement('div');
+                serviceItemElement.className = 'service-item';
+                serviceItemElement.setAttribute('data-category', item.category);
+                
+                // Crear badges
+                let badgesHTML = '';
+                if (item.badges && item.badges.length > 0) {
+                    badgesHTML = item.badges.map(badge => 
+                        `<span class="badge badge-${badge}">${badge}</span>`
+                    ).join('');
+                }
+                
+                serviceItemElement.innerHTML = `
+                    <div class="service-item-image">
+                        <img src="${item.image}" alt="${item.name}" loading="lazy">
+                    </div>
+                    <div class="service-item-content">
+                        <div class="service-item-header">
+                            <h3 class="service-item-title">${item.name}</h3>
+                            <div class="service-item-price">€${item.price.toFixed(2)}</div>
+                        </div>
+                        <p class="service-item-description">${item.description}</p>
+                        <div class="service-item-badges">
+                            ${badgesHTML}
+                        </div>
+                        <a href="https://wa.me/593991053085?text=${encodeURIComponent(item.whatsappMessage)}" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                        </a>
+                    </div>
+                `;
+                
+                servicesGrid.appendChild(serviceItemElement);
+            });
+        }
+
+        // Función para configurar filtros de servicios
+        function setupServiceFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover clase active de todos los botones
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Agregar clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    // Filtrar elementos de servicios
+                    const filter = this.getAttribute('data-filter');
+                    renderServiceItems(filter);
+                });
+            });
+        }
+
+        // Función para renderizar reseñas
+        function renderReviews() {
+            const reviewsCarousel = document.getElementById('reviewsCarousel');
+            reviewsCarousel.innerHTML = '';
+            
+            reviews.forEach(review => {
+                const reviewElement = document.createElement('div');
+                reviewElement.className = 'review-card';
+                
+                // Crear estrellas de rating
+                let starsHTML = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= review.rating) {
+                        starsHTML += '<i class="fas fa-star"></i>';
+                    } else {
+                        starsHTML += '<i class="far fa-star"></i>';
+                    }
+                }
+                
+                reviewElement.innerHTML = `
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="${review.avatar}" alt="${review.name}">
+                        </div>
+                        <div class="review-info">
+                            <div class="reviewer-name">${review.name}</div>
+                            <div class="reviewer-location">${review.location}</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        ${starsHTML}
+                    </div>
+                    <div class="review-text">
+                        "${review.text}"
+                    </div>
+                    <div class="review-date">
+                        ${review.date}
+                    </div>
+                `;
+                
+                reviewsCarousel.appendChild(reviewElement);
+            });
+        }
+
+        // Función para configurar carrusel de reseñas
+        function setupReviewsCarousel() {
+            const carousel = document.getElementById('reviewsCarousel');
+            const prevBtn = document.getElementById('prevReview');
+            const nextBtn = document.getElementById('nextReview');
+            const reviewCards = document.querySelectorAll('.review-card');
+            let currentIndex = 0;
+            
+            // Calcular el ancho de cada tarjeta (incluyendo el gap)
+            const cardWidth = reviewCards[0] ? reviewCards[0].offsetWidth + parseInt(getComputedStyle(carousel).gap) : 0;
+            
+            function updateCarousel() {
+                if (reviewCards.length > 0) {
+                    carousel.scrollTo({
+                        left: currentIndex * cardWidth,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            
+            prevBtn.addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                if (currentIndex < reviewCards.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+            
+            // Actualizar en redimensionamiento de ventana
+            window.addEventListener('resize', function() {
+                if (reviewCards.length > 0) {
+                    // Recalcular el ancho de la tarjeta después del redimensionamiento
+                    const newCardWidth = reviewCards[0].offsetWidth + parseInt(getComputedStyle(carousel).gap);
+                    if (newCardWidth !== cardWidth) {
+                        updateCarousel();
+                    }
+                }
+            });
+        }
+
+        // Función para configurar navegación suave
+        function setupSmoothScrolling() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        // Cerrar menú móvil si está abierto
+                        const navMenu = document.getElementById('navMenu');
+                        navMenu.classList.remove('active');
+                        
+                        // Desplazarse a la sección
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Actualizar enlace activo
+                        navLinks.forEach(navLink => navLink.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Función para configurar menú móvil
+        function setupMobileMenu() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                
+                // Cambiar icono
+                const icon = this.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.remove('fa-times');
+                    mobileToggle.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Función para configurar formulario de contacto
+        function setupContactForm() {
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Obtener datos del formulario
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+                
+                // Construir mensaje para WhatsApp
+                const whatsappMessage = `Hola, me gustaría contactar con Belleza Élite. Aquí están mis datos:%0A%0A*Nombre Completo:*%0A${name}%0A%0A*Email:*%0A${email}%0A%0A*Teléfono:*%0A${phone}%0A%0A*Servicio de Interés:*%0A${service}%0A%0A*Mensaje:*%0A${message}`;
+                
+                // Redirigir a WhatsApp
+                window.open(`https://wa.me/593991053085?text=${whatsappMessage}`, '_blank');
+            });
+        }
+
+        // Función para configurar efecto de header al hacer scroll
+        function setupHeaderScroll() {
+            const header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                // Actualizar enlace activo según la sección visible
+                updateActiveNavLink();
+            });
+        }
+
+        // Función para actualizar enlace de navegación activo
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Función para configurar el modal de servicios completo
+        function setupServicesModal() {
+            const viewFullServicesBtn = document.getElementById('viewFullServicesBtn');
+            const servicesModal = document.getElementById('servicesModal');
+            const servicesModalClose = document.getElementById('servicesModalClose');
+            const servicesModalBody = document.getElementById('servicesModalBody');
+            
+            // Abrir modal al hacer clic en el botón
+            viewFullServicesBtn.addEventListener('click', function() {
+                renderFullServices();
+                servicesModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+            });
+            
+            // Cerrar modal
+            servicesModalClose.addEventListener('click', function() {
+                servicesModal.classList.remove('active');
+                document.body.style.overflow = ''; // Restaurar scroll del body
+            });
+            
+            // Cerrar modal al hacer clic fuera del contenido
+            servicesModal.addEventListener('click', function(e) {
+                if (e.target === servicesModal) {
+                    servicesModal.classList.remove('active');
+                    document.body.style.overflow = ''; // Restaurar scroll del body
+                }
+            });
+            
+            // Cerrar modal con tecla Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && servicesModal.classList.contains('active')) {
+                    servicesModal.classList.remove('active');
+                    document.body.style.overflow = ''; // Restaurar scroll del body
+                }
+            });
+        }
+
+        // Función para renderizar los servicios completos en el modal
+        function renderFullServices() {
+            const servicesModalBody = document.getElementById('servicesModalBody');
+            servicesModalBody.innerHTML = '';
+            
+            // Agrupar elementos por categoría
+            const itemsByCategory = {};
+            serviceItems.forEach(item => {
+                if (!itemsByCategory[item.category]) {
+                    itemsByCategory[item.category] = [];
+                }
+                itemsByCategory[item.category].push(item);
+            });
+            
+            // Renderizar cada categoría
+            serviceCategories.forEach(category => {
+                if (itemsByCategory[category.id]) {
+                    const categoryElement = document.createElement('div');
+                    categoryElement.className = 'services-category';
+                    
+                    const categoryTitle = document.createElement('h4');
+                    categoryTitle.className = 'services-category-title';
+                    categoryTitle.textContent = category.name;
+                    
+                    const categoryItems = document.createElement('div');
+                    categoryItems.className = 'services-category-items';
+                    
+                    // Renderizar elementos de esta categoría
+                    itemsByCategory[category.id].forEach(item => {
+                        const serviceItemElement = document.createElement('div');
+                        serviceItemElement.className = 'service-full-item';
+                        
+                        // Crear badges
+                        let badgesHTML = '';
+                        if (item.badges && item.badges.length > 0) {
+                            badgesHTML = item.badges.map(badge => 
+                                `<span class="badge badge-${badge}">${badge}</span>`
+                            ).join('');
+                        }
+                        
+                        serviceItemElement.innerHTML = `
+                            <div class="service-full-item-content">
+                                <h5 class="service-full-item-title">${item.name}</h5>
+                                <p class="service-full-item-description">${item.description}</p>
+                                <div class="service-item-badges">
+                                    ${badgesHTML}
+                                </div>
+                                <a href="https://wa.me/593991053085?text=${encodeURIComponent(item.whatsappMessage)}" class="btn btn-whatsapp" target="_blank" style="margin-top: 10px;">
+                                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                                </a>
+                            </div>
+                            <div class="service-full-item-price">€${item.price.toFixed(2)}</div>
+                        `;
+                        
+                        categoryItems.appendChild(serviceItemElement);
+                    });
+                    
+                    categoryElement.appendChild(categoryTitle);
+                    categoryElement.appendChild(categoryItems);
+                    servicesModalBody.appendChild(categoryElement);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
